@@ -1,0 +1,51 @@
+{
+  "name": "contao-thememanager/ctm-tabs",
+  "type": "contao-bundle",
+  "description": "Tabs integration for Contao Theme-Manager",
+  "keywords": ["contao","theme","tabs"],
+  "homepage": "https://www.oveleon.de/thememanager.html",
+  "authors": [
+    {
+      "name": "Oveleon",
+      "homepage": "https://oveleon.de/",
+      "role": "Developer"
+    },
+    {
+      "name": "Sebastian Zoglowek",
+      "homepage": "https://github.com/zoglo",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "contao/core-bundle": "^4.13",
+    "contao-thememanager/core": "^2.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.3.1"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ContaoThemeManager\\Tabs\\": "src/"
+    },
+    "classmap": [
+      "contao/"
+    ],
+    "exclude-from-classmap": [
+      "contao/config/",
+      "contao/dca/",
+      "contao/languages/",
+      "contao/templates/"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0.x-dev"
+    },
+    "contao-manager-plugin": "ContaoThemeManager\\Tabs\\ContaoManager\\Plugin"
+  }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/default.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="CTE.tabs">
+        <source>Tabs</source>
+        <target>Tabs</target>
+      </trans-unit>
+      <trans-unit id="CTE.tabStart.0">
+        <source>Tab start</source>
+        <target>Tab Anfang</target>
+      </trans-unit>
+      <trans-unit id="CTE.tabStart.1">
+        <source>Generates the opening part of a single tab element.</source>
+        <target>Erzeugt den öffnenden Teil eines einzelnen Tab-Elements.</target>
+      </trans-unit>
+      <trans-unit id="CTE.tabStop.0">
+        <source>Tab stop</source>
+        <target>Tab Ende</target>
+      </trans-unit>
+      <trans-unit id="CTE.tabStop.1">
+        <source>Generates the closing part of a single tab element.</source>
+        <target>Erzeugt den schließenden Teil eines einzelnen Tab-Elements.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

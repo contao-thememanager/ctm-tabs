@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archives>
+
+  <archive identifier="cLayout">
+    <field title="identifier">cLayout</field>
+    <children>
+      <child alias="templateBoxAll">
+        <field title="pid">1000</field>
+        <field title="sorting">600</field>
+        <field title="alias">templateBoxAll</field>
+        <field title="title">Box</field>
+        <field title="description">Here you can select a box design for this component.</field>
+        <field title="cssClasses">a:2:{i:0;a:2:{s:3:"key";s:19:"box color-text-base";s:5:"value";s:3:"Box";}i:1;a:2:{s:3:"key";s:30:"box box-shadow color-text-base";s:5:"value";s:10:"Box Shadow";}}</field>
+        <field title="blankOption">1</field>
+        <field title="passToTemplate">1</field>
+        <field title="extendContentElement">1</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cGridColumn">
+    <field title="identifier">cGridColumn</field>
+    <children>
+      <child alias="col">
+        <field title="alias">col</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="colXS">
+        <field title="alias">colXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="colS">
+        <field title="alias">colS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="colM">
+        <field title="alias">colM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="colL">
+        <field title="alias">colL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="colXL">
+        <field title="alias">colXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cGridOffset">
+    <field title="identifier">cGridOffset</field>
+    <children>
+      <child alias="offset">
+        <field title="alias">offset</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="offsetXS">
+        <field title="alias">offsetXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="offsetS">
+        <field title="alias">offsetS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="offsetM">
+        <field title="alias">offsetM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="offsetL">
+        <field title="alias">offsetL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="offsetXL">
+        <field title="alias">offsetXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cGridOrder">
+    <field title="identifier">cGridOrder</field>
+    <children>
+      <child alias="order">
+        <field title="alias">order</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="orderXS">
+        <field title="alias">orderXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="orderS">
+        <field title="alias">orderS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="orderM">
+        <field title="alias">orderM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="orderL">
+        <field title="alias">orderL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="orderXL">
+        <field title="alias">orderXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cGridAlignment">
+    <field title="identifier">cGridAlignment</field>
+    <children>
+      <child alias="gridSelfAlignment">
+        <field title="alias">gridSelfAlignment</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="gridSelfAlignmentXS">
+        <field title="alias">gridSelfAlignmentXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="gridSelfAlignmentS">
+        <field title="alias">gridSelfAlignmentS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="gridSelfAlignmentM">
+        <field title="alias">gridSelfAlignmentM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="gridSelfAlignmentL">
+        <field title="alias">gridSelfAlignmentL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="gridSelfAlignmentXL">
+        <field title="alias">gridSelfAlignmentXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cSpacing">
+    <field title="identifier">cSpacing</field>
+    <children>
+      <child alias="topSpacing">
+        <field title="alias">topSpacing</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="topSpacingXS">
+        <field title="alias">topSpacingXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="topSpacingS">
+        <field title="alias">topSpacingS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="topSpacingM">
+        <field title="alias">topSpacingM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="topSpacingL">
+        <field title="alias">topSpacingL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="topSpacingXL">
+        <field title="alias">topSpacingXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacing">
+        <field title="alias">bottomSpacing</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacingXS">
+        <field title="alias">bottomSpacingXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacingS">
+        <field title="alias">bottomSpacingS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacingM">
+        <field title="alias">bottomSpacingM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacingL">
+        <field title="alias">bottomSpacingL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="bottomSpacingXL">
+        <field title="alias">bottomSpacingXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacing">
+        <field title="alias">leftSpacing</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacingXS">
+        <field title="alias">leftSpacingXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacingS">
+        <field title="alias">leftSpacingS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacingM">
+        <field title="alias">leftSpacingM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacingL">
+        <field title="alias">leftSpacingL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="leftSpacingXL">
+        <field title="alias">leftSpacingXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacing">
+        <field title="alias">rightSpacing</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacingXS">
+        <field title="alias">rightSpacingXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacingS">
+        <field title="alias">rightSpacingS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacingM">
+        <field title="alias">rightSpacingM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacingL">
+        <field title="alias">rightSpacingL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="rightSpacingXL">
+        <field title="alias">rightSpacingXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="cPadding">
+    <field title="identifier">cPadding</field>
+    <children>
+      <child alias="padding">
+        <field title="alias">padding</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="paddingXS">
+        <field title="alias">paddingXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="paddingS">
+        <field title="alias">paddingS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="paddingM">
+        <field title="alias">paddingM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="paddingL">
+        <field title="alias">paddingL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="paddingXL">
+        <field title="alias">paddingXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+
+  <archive identifier="eList">
+    <field title="identifier">eList</field>
+    <children>
+      <child alias="list">
+        <field title="alias">list</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listXS">
+        <field title="alias">listXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listS">
+        <field title="alias">listS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listM">
+        <field title="alias">listM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listL">
+        <field title="alias">listL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listXL">
+        <field title="alias">listXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="direction">
+        <field title="alias">direction</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="listGutter">
+        <field title="alias">listGutter</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="justifyList">
+        <field title="alias">justifyList</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+  <archive identifier="ePadding">
+    <field title="identifier">ePadding</field>
+    <children>
+      <child alias="ip">
+        <field title="alias">ip</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="ipXS">
+        <field title="alias">ipXS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="ipS">
+        <field title="alias">ipS</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="ipM">
+        <field title="alias">ipM</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="ipL">
+        <field title="alias">ipL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+      <child alias="ipXL">
+        <field title="alias">ipXL</field>
+        <field title="contentElements">a:1:{i:0;s:8:"tabStart";}</field>
+      </child>
+    </children>
+  </archive>
+</archives>
