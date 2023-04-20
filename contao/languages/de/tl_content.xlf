@@ -13,19 +13,6 @@
         <source>Here you can enter the label of a tab.</source>
         <target>Hier können Sie das Label eines Tabs eintragen.</target>
       </trans-unit>
-      <trans-unit id="tl_content.tabGroup.0">
-        <source>Group</source>
-        <target>Gruppe</target>
-      </trans-unit>
-      <trans-unit id="tl_content.tabGroup.1">
-        <source>To assign the tab to a group, enter a &lt;em&gt;data-group&lt;/em&gt; attribute here. When no value has been assigned
-          the pid of the article is acquired automatically.
-        </source>
-        <target>Hier können Sie ein &lt;em&gt;data-group&lt;/em&gt;-Attribut eingeben, um dem Tab eine Gruppe
-          zuweisen zu können. Bei einem leeren Wert wird die pid des Artikels automatisch
-          ermittelt.
-        </target>
-      </trans-unit>
     </body>
   </file>
 </xliff>

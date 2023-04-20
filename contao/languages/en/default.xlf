@@ -10,6 +10,12 @@
       <trans-unit id="CTE.tabStart.1">
         <source>Generates the opening part of a single tab element.</source>
       </trans-unit>
+      <trans-unit id="CTE.tabDivider.0">
+        <source>Tab divider</source>
+      </trans-unit>
+      <trans-unit id="CTE.tabDivider.1">
+        <source>Generates the dividing part between two tab contents.</source>
+      </trans-unit>
       <trans-unit id="CTE.tabStop.0">
         <source>Tab stop</source>
       </trans-unit>

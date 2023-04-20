@@ -19,7 +19,7 @@ class TabStartController extends AbstractContentElementController
 {
     public const TYPE = 'tabStart';
 
-    private static array $tabStartElements = [];
+    private static array $tabGroups = [];
 
     protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
     {
@@ -33,15 +33,10 @@ class TabStartController extends AbstractContentElementController
         }
         else
         {
-            $labels = [];
-
-            $template->tabGroup = $group = !!$model->tabGroup ? $model->tabGroup : 'article_'.$model->pid;
-            $template->tabLabel = $model->tabLabel;
-
-            // Only build navigation for first item in every tab group
-            if (null === self::getTabStartElements($model->pid, $group))
+            // Initialize tab group cache if it does not exist
+            if (null === self::getTabLabels($model->id))
             {
-                $cols = ["tl_content.pid=? AND tl_content.type=? AND tl_content.tabGroup=?"];
+                $cols = ["tl_content.pid=?"];
 
                 if (!$container->get('contao.security.token_checker')->isPreviewMode())
                 {
@@ -51,22 +46,46 @@ class TabStartController extends AbstractContentElementController
                            AND (tl_content.stop='' OR tl_content.stop>'$time')";
                 }
 
-                $tabElements = ContentModel::findBy(
+                $elements = ContentModel::findBy(
                     $cols,
-                    [$model->pid, 'tabStart', $model->tabGroup],
+                    [$model->pid],
                     ['order' => 'sorting ASC']
                 );
 
-                if (
-                    null !== $tabElements &&
-                    !empty($labels[$model->pid][$group] = $tabElements->fetchEach('tabLabel'))
-                )
+                if (null !== $elements)
                 {
-                    self::$tabStartElements = $labels;
+                    $index     = -1;
+                    $groupIds  = [];
 
-                    $template->tabNav = true;
-                    $template->tabNavElements = $labels[$model->pid][$group];
+                    // Collect tab labels (recursively)
+                    while ($elements->next())
+                    {
+                        switch ($elements->type)
+                        {
+                            case 'tabStop':
+                                $index--;
+                                break;
+
+                            case 'tabDivider':
+                                self::$tabGroups[$groupIds[$index]]['tabs'][$elements->id] = $elements->tabLabel;
+                                break;
+
+                            case self::TYPE:
+                                $index++;
+                                $groupIds[$index] = $elements->id;
+
+                                self::$tabGroups[$elements->id] = [
+                                    'group' => $elements->id,
+                                    'tabs' => [$elements->id => $elements->tabLabel]
+                                ];
+                        }
+                    }
                 }
+            }
+
+            if (null !== ($tabGroup = self::getTabLabels($model->id)))
+            {
+                $template->tabNavElements = $tabGroup;
             }
         }
 
@@ -76,11 +95,11 @@ class TabStartController extends AbstractContentElementController
     /**
      * Gets the previously set tabs
      */
-    private function getTabStartElements($pid, $group): ?array
+    private function getTabLabels($id): ?array
     {
-        if (isset(self::$tabStartElements[$pid][$group]))
+        if (array_key_exists($id, self::$tabGroups))
         {
-            return self::$tabStartElements[$pid][$group];
+            return self::$tabGroups[$id]['tabs'];
         }
 
         return null;

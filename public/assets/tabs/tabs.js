@@ -14,7 +14,7 @@ export default class Tabs
 {
     tabs = []
     options = {
-        selector: '[data-tab-list]',
+        selector: '.tab-nav',
         content:  '.tab-content>.inside',
         cssClasses: {
             active:  'active'
@@ -40,8 +40,8 @@ export default class Tabs
      */
     _initTabs()
     {
-        this.navigations.forEach((list) => {
-            this._initTabGroup(list)
+        this.navigations.forEach((navContainer) => {
+            this._initTabGroup(navContainer)
         });
     }
 
@@ -51,13 +51,14 @@ export default class Tabs
      * @param list
      * @private
      */
-    _initTabGroup(list)
+    _initTabGroup(navContainer)
     {
-        const group = list.dataset.tabList;
-        const navs  = list.querySelectorAll('[data-tab-toggle]')
-        const tabs  = document.querySelectorAll(`[data-tab-group=${group}]`)
+        const navs  = navContainer.querySelectorAll('[data-tab-toggle]')
+        const tabs = navContainer.nextElementSibling.firstElementChild.children
 
-        this._buildStructure(list, tabs)
+        tabs[0].classList.add(this.options.cssClasses.active)
+
+        //this._buildStructure(list, tabs)
 
         navs.forEach(nav => this._bindEvents(nav, navs, tabs))
     }
@@ -91,10 +92,10 @@ export default class Tabs
         nav.onclick = e => {
             navs.forEach(i => i.classList.remove(active))
 
-            tabs.forEach(i => {
-                i.classList.remove(active)
-                if (e.target.dataset.tabToggle === i.dataset.tabId)
-                    i.classList.add(active)
+            Object.entries(tabs).forEach(([k, v]) => {
+                v.classList.remove(active)
+                if (e.target.dataset.tabToggle === v.dataset.tabId)
+                    v.classList.add(active)
             })
 
             e.target.classList.add(active)

@@ -13,6 +13,14 @@
         <source>Generates the opening part of a single tab element.</source>
         <target>Erzeugt den öffnenden Teil eines einzelnen Tab-Elements.</target>
       </trans-unit>
+      <trans-unit id="CTE.tabDivider.0">
+        <source>Tab divider</source>
+        <target>Tab-Trennelement</target>
+      </trans-unit>
+      <trans-unit id="CTE.tabDivider.1">
+        <source>Generates the dividing part between two tab contents.</source>
+        <source>Erzeugt den trennenden Teil zwischen zwei Tab-Inhalten.</source>
+      </trans-unit>
       <trans-unit id="CTE.tabStop.0">
         <source>Tab stop</source>
         <target>Tab Ende</target>
