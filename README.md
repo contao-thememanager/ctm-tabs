@@ -4,6 +4,7 @@
 - Extends the Contao ThemeManager palette with options to configure tabs.
 - Adds the following content-elements:
     - tabStart
+    - tabDivider
     - tabStop
 
 After compiling your theme, make sure to add:
