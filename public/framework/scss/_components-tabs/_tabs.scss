@@ -12,6 +12,10 @@
   --v-gap: 0;
 }
 
+.tab-content > .inside {
+  overflow: hidden;
+}
+
 .t-nav-item > * {
   background-color: $tab-label-background;
   color: $tab-label-color;
