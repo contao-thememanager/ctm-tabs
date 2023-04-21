@@ -1,5 +1,5 @@
 <?php
-  $GLOBALS['TL_JAVASCRIPT'][] = '/bundles/contaothememanagertabs/assets/dist/tabs.js';
+  $GLOBALS['TL_JAVASCRIPT'][] = '/bundles/contaothememanagertabs/assets/dist/tabs.js|static';
 ?>
 
 <script>
