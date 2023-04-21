@@ -1,1 +1,18 @@
 // Tabs
+$tab-label-line-height:           1 !default;
+$tab-label-font-size:             $font-size-base !default;
+$tab-label-font-weight:           $font-weight-base !default;
+$tab-label-transform:             none !default;
+
+$tab-label-border-radius:         0 !default;
+$tab-label-border-width:          0 !default;
+$tab-label-border-style:          none !default;
+
+$tab-label-background:            var(--clr-secondary) !default;
+$tab-label-color:                 var(--text-clr-invert) !default;
+$tab-label-border-color:          var(--clr-secondary) !default;
+$tab-label-background-active:     var(--clr-primary) !default;
+$tab-label-color-active:          var(--text-clr-invert) !default;
+$tab-label-border-color-active:   var(--clr-primary) !default;
+
+$tab-label-padding:               .75rem 1.5rem !default;

@@ -11,3 +11,27 @@
 .ctm-tabs {
   --v-gap: 0;
 }
+
+.t-nav-item > * {
+  background-color: $tab-label-background;
+  color: $tab-label-color;
+
+  font-size: $tab-label-font-size;
+  line-height: $tab-label-line-height;
+  font-weight: $tab-label-font-weight;
+  text-transform: $tab-label-transform;
+
+  border:$tab-label-border-width $tab-label-border-style;
+  border-color: $tab-label-border-color;
+  border-radius: $tab-label-border-radius;
+
+  padding: $tab-label-padding;
+
+  cursor: pointer;
+
+  &.active {
+    background-color: $tab-label-background-active;
+    color: $tab-label-color-active;
+    border-color: $tab-label-border-color-active;
+  }
+}

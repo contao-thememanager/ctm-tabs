@@ -1,0 +1,102 @@
+<?php return [
+    'palettes' => [
+        'default'  =>
+            '{tabs_legend:hide},tab-label-line-height,tab-label-font-size,tab-label-font-weight,tab-label-transform,tab-label-border-radius,tab-label-border-width,tab-label-border-style,tab-label-background,tab-label-color,tab-label-border-color,tab-label-background-active,tab-label-color-active,tab-label-border-color-active,tab-label-padding;'
+    ],
+    'fields'   => [
+        // Tabs
+        'tab-label-line-height' => [
+            'default'                 => '1',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-line-height'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'1', 'rgxp'=>'digit', 'maxlength'=>32, 'tl_class'=>'w25 clr'],
+        ],
+        'tab-label-font-size' => [
+            'default'                 => 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:15:"$font-size-base";}',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-font-size'],
+            'inputType'               => 'inputUnit',
+            'options'                 => $GLOBALS['CTM_CSS_UNITS'],
+            'eval'                    => ['placeholder'=>'$font-size-base', 'includeBlankOption'=>true, 'rgxp'=>'digit_inherit', 'maxlength'=>32, 'tl_class'=>'w25'],
+        ],
+        'tab-label-font-weight' => [
+            'default'                 => '$font-weight-base',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-font-weight'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'$font-weight-base', 'rgxp'=>'digit_inherit', 'maxlength'=>32, 'tl_class'=>'w25'],
+        ],
+        'tab-label-transform' => [
+            'default'                 => 'none',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-transform'],
+            'inputType'               => 'select',
+            'options'                 => ['none', 'uppercase', 'lowercase', 'capitalize'],
+            'eval'                    => ['maxlength'=>32, 'tl_class'=>'w25'],
+        ],
+
+        'tab-label-border-radius' => [
+            'default'                 => 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:0:"";s:3:"top";s:1:"0";s:4:"unit";s:0:"";}',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-border-radius'],
+            'inputType'               => 'trbl',
+            'options'                 => $GLOBALS['CTM_CSS_UNITS'],
+            'eval'                    => ['includeBlankOption'=>true, 'rgxp'=>'digit_', 'tl_class'=>'w50 clr'],
+        ],
+        'tab-label-border-width' => [
+            'default'                 => 'a:2:{s:4:"unit";s:0:"";s:5:"value";s:1:"0";}',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-border-width'],
+            'inputType'               => 'inputUnit',
+            'options'                 => $GLOBALS['CTM_CSS_UNITS'],
+            'eval'                    => ['placeholder'=>'0', 'includeBlankOption'=>true, 'rgxp'=>'digit_inherit', 'maxlength'=>32, 'tl_class'=>'w25'],
+        ],
+        'tab-label-border-style' => [
+            'default'                 => 'none',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-border-style'],
+            'inputType'               => 'select',
+            'options'                 => ['none', 'initial', 'inherit', 'solid', 'dashed', 'dotted', 'double', 'wave', 'ridge', 'inset', 'outset', 'hidden'],
+            'eval'                    => ['maxlength'=>32, 'tl_class'=>'w25', 'chosen'=>true],
+        ],
+
+        'tab-label-background' => [
+            'default'                 => 'var(--clr-secondary)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-background'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--clr-secondary)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard clr'],
+        ],
+        'tab-label-color' => [
+            'default'                 => 'var(--text-clr-invert)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-color'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--text-clr-invert)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard'],
+        ],
+        'tab-label-border-color' => [
+            'default'                 => 'var(--clr-secondary)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-border-color'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--clr-secondary)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard'],
+        ],
+        'tab-label-background-active' => [
+            'default'                 => 'var(--clr-primary)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-background-active'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--clr-primary)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard clr'],
+        ],
+        'tab-label-color-active' => [
+            'default'                 => 'var(--text-clr-invert)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-color-active'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--text-clr-invert)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard'],
+        ],
+        'tab-label-border-color-active' => [
+            'default'                 => 'var(--clr-primary)',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-border-color-active'],
+            'inputType'               => 'text',
+            'eval'                    => ['placeholder'=>'var(--clr-primary)', 'maxlength'=>64, 'colorpicker'=>true, 'decodeEntities'=>true, 'tl_class'=>'w33 wizard'],
+        ],
+
+        'tab-label-padding' => [
+            'default'                 => 'a:5:{s:6:"bottom";s:0:"";s:4:"left";s:0:"";s:5:"right";s:3:"1.5";s:3:"top";s:4:"0.75";s:4:"unit";s:3:"rem";}',
+            'label'                   => &$GLOBALS['TL_LANG']['tl_thememanager']['tab-label-padding'],
+            'inputType'               => 'trbl',
+            'options'                 => $GLOBALS['CTM_CSS_UNITS'],
+            'eval'                    => ['includeBlankOption'=>true, 'rgxp'=>'digit_inherit', 'tl_class'=>'w50'],
+        ],
+    ]
+];

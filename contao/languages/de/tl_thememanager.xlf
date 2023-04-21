@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+  <file datatype="php" original="contao/languages/en/tl_thememanager.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_thememanager.tabs_legend">
+        <source>Tabs</source>
+        <target>Tabs</target>
+      </trans-unit>
+
+      <trans-unit id="tl_thememanager.tab-label-line-height.0">
+        <source>$tab-label-line-height</source>
+        <target>$tab-label-line-height</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-line-height.1">
+        <source>Here you can set the line-height for tab labels.</source>
+        <target>Hier können Sie die Zeilenhöhe für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-font-size.0">
+        <source>$tab-label-font-size</source>
+        <target>$tab-label-font-size</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-font-size.1">
+        <source>Here you can set the font-size for tab labels.</source>
+        <target>Hier können Sie die Schriftgröße für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-font-weight.0">
+        <source>$tab-label-font-weight</source>
+        <target>$tab-label-font-weight</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-font-weight.1">
+        <source>Here you can set the font-weight for tab labels.</source>
+        <target>Hier können Sie die Schriftdicke (font-weight) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-transform.0">
+        <source>$tab-label-transform</source>
+        <target>$tab-label-transform</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-transform.1">
+        <source>Here you can choose the text-transformation for tab labels.</source>
+        <target>Hier können Sie die Text-Transformierung (text-transform) für Tab-Reiter auswählen.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_thememanager.tab-label-border-radius.0">
+        <source>$tab-label-border-radius</source>
+        <target>$tab-label-border-radius</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-radius.1">
+        <source>Here you can set the border-radius for tab labels.</source>
+        <target>Hier können Sie den Rahmen-Radius (border-radius) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-width.0">
+        <source>$tab-label-border-width</source>
+        <target>$tab-label-border-width</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-width.1">
+        <source>Here you can set the border-width for tab labels.</source>
+        <target>Hier können Sie die Rahmenbreite (border-width) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-style.0">
+        <source>$tab-label-border-style</source>
+        <target>$tab-label-border-style</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-style.1">
+        <source>Here you can choose the border-style for tab labels.</source>
+        <target>Hier können Sie den Rahmenstil (border-style) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_thememanager.tab-label-background.0">
+        <source>$tab-label-background</source>
+        <target>$tab-label-background</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-background.1">
+        <source>Here you can set the background for tab labels.</source>
+        <target>Hier können Sie die Hintergrundfarbe für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-color.0">
+        <source>$tab-label-color</source>
+        <target>$tab-label-color</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-color.1">
+        <source>Here you can set the text color for tab labels.</source>
+        <target>Hier können Sie die Schriftfarbe für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-color.0">
+        <source>$tab-label-border-color</source>
+        <target>$tab-label-border-color</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-color.1">
+        <source>Here you can set the border-color for tab labels.</source>
+        <target>Hier können Sie die Rahmen-Farbe (border-color) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-background-active.0">
+        <source>$tab-label-background-active</source>
+        <target>$tab-label-background-active</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-background-active.1">
+        <source>Here you can set the active background color for tab labels.</source>
+        <target>Hier können Sie die aktive Hintergrundfarbe für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-color-active.0">
+        <source>$tab-label-color-active</source>
+        <target>$tab-label-color-active</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-color-active.1">
+        <source>Here you can set the active text color for tab labels.</source>
+        <target>Hier können Sie die aktive Schriftfarbe für Tab-Reiter einstellen.</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-color-active.0">
+        <source>$tab-label-border-color-active</source>
+        <target>$tab-label-border-color-active</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-border-color-active.1">
+        <source>Here you can set the active border-color for tab labels.</source>
+        <target>Hier können Sie die aktive Rahmen-Farbe (border-color) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_thememanager.tab-label-padding.0">
+        <source>$tab-label-padding</source>
+        <target>$tab-label-padding</target>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tab-label-padding.1">
+        <source>Here you can set the padding for tab labels.</source>
+        <target>Hier können Sie den Polster / inneren Abstand (padding) für Tab-Reiter einstellen.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
