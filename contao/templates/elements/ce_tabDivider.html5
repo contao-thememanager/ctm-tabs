@@ -1,6 +1,10 @@
-
+<?php
+  $sm = $this->styleManager;
+  $insideClasses = $sm->prepare('cSpacing')->format(' %s') .
+                   $sm->prepare('cPadding')->format(' %s') ?: ' p-1';
+?>
 
   </div>
 </div>
 <div class="ce_tab grid" data-tab-id="#tab_<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-  <div class="inside">
+  <div class="inside<?= $insideClasses ?>">

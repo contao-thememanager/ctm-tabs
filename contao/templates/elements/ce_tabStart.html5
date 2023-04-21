@@ -1,23 +1,22 @@
 <?php
   $sm = $this->styleManager;
-  $insideClasses = $sm->prepare('cSpacing')->format(' %s') .
-                   $sm->prepare('cPadding')->format(' %s');
   $ulClasses     = $sm->prepare('eList')->format(' %s');
   $tabAClasses   = $sm->prepare('eLink')->format(' %s');
-  $tabCClasses   = $sm->prepare('cLayout')->format(' %s') .
-                   $sm->prepare('ePadding')->format(' %s');
+  $tabCClasses   = $sm->prepare('cLayout')->format(' %s');
+  $insideClasses = $sm->prepare('cSpacing')->format(' %s') .
+                   $sm->prepare('cPadding')->format(' %s') ?: ' p-1';
 ?>
 
 <div class="ctm-tabs grid <?= $this->class ?>"<?= $this->cssID ?>>
-  <div class="inside<?= $insideClasses ?>">
+  <div class="inside">
     <ul class="tab-nav c_list li-none<?= $ulClasses ?>">
       <?php $i=0;foreach ($this->tabNavElements as $id => $label):$i++?>
         <li class="t-nav-item">
-          <div class="button <?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="#tab_<?=$id?>"><?=$label?></div>
+          <div class="<?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="#tab_<?=$id?>"><?=$label?></div>
         </li>
       <?php endforeach; ?>
     </ul>
     <div class="tab-content item<?= $tabCClasses ?>">
-      <div class="inside">
+      <div class="inside p-0">
         <div class="ce_tab grid" data-tab-id="#tab_<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-          <div class="inside">
+          <div class="inside<?= $insideClasses ?>">
