@@ -21,7 +21,7 @@ class TabStartController extends AbstractContentElementController
 
     private static array $tabGroups = [];
 
-    protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
+    protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
         $container = System::getContainer();
 

@@ -18,7 +18,7 @@ class TabDividerController extends AbstractContentElementController
 {
     public const TYPE = 'tabDivider';
 
-    protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
+    protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
         // Do not display template in backend
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request))
