@@ -1,5 +1,16 @@
-/node_modules/
-/package-lock.json
-/.idea
+# Composer
 /composer.lock
-/.env
+/vendor/
+
+# Node
+/package-lock.json
+/node_modules/
+
+# PhpUnit
+/.phpunit.result.cache
+/phpunit.xml
+
+# IDE
+/.idea
+
+.env
