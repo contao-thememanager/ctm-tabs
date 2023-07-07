@@ -1,6 +1,6 @@
 {
   "name": "contao-thememanager/ctm-tabs",
-  "type": "contao-bundle",
+  "type": "symfony-bundle",
   "description": "Tabs integration for Contao Theme-Manager",
   "keywords": ["contao","theme","tabs"],
   "homepage": "https://www.oveleon.de/thememanager.html",
