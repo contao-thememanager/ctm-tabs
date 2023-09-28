@@ -3,7 +3,7 @@
   "type": "symfony-bundle",
   "description": "Tabs integration for Contao Theme-Manager",
   "keywords": ["contao","theme","tabs"],
-  "homepage": "https://www.oveleon.de/thememanager.html",
+  "homepage": "https://www.contao-thememanager.com/",
   "authors": [
     {
       "name": "Oveleon",
