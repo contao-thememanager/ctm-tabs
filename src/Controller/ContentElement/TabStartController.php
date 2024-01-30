@@ -14,7 +14,7 @@ use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(TabStartController::TYPE, category:'tabs')]
+#[AsContentElement(TabStartController::TYPE, category:'tabs', template:'ce_tabStart')]
 class TabStartController extends AbstractContentElementController
 {
     public const TYPE = 'tabStart';

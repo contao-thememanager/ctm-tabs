@@ -13,7 +13,7 @@ use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(TabDividerController::TYPE, category:'tabs')]
+#[AsContentElement(TabDividerController::TYPE, category:'tabs', template:'ce_tabDivider')]
 class TabDividerController extends AbstractContentElementController
 {
     public const TYPE = 'tabDivider';

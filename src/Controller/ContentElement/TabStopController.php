@@ -13,7 +13,7 @@ use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(TabStopController::TYPE, category:'tabs')]
+#[AsContentElement(TabStopController::TYPE, category:'tabs', template:'ce_tabStop')]
 class TabStopController extends AbstractContentElementController
 {
     public const TYPE = 'tabStop';
