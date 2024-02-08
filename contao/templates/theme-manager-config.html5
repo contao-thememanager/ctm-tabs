@@ -1,7 +1,10 @@
 <?php return [
     'palettes' => [
         'default'  =>
-            '{tabs_legend:hide},tab-label-line-height,tab-label-font-size,tab-label-font-weight,tab-label-transform,tab-label-border-radius,tab-label-border-width,tab-label-border-style,tab-label-background,tab-label-color,tab-label-border-color,tab-label-background-active,tab-label-color-active,tab-label-border-color-active,tab-label-padding;'
+            '{tabs_label_typography_legend:hide ctm-group palette-group[tabs_header]},tab-label-line-height,tab-label-font-size,tab-label-font-weight,tab-label-transform;' .
+            '{tabs_label_border_legend:hide ctm-group},tab-label-border-radius,tab-label-border-width,tab-label-border-style;' .
+            '{tabs_label_color_legend:hide ctm-group},tab-label-background,tab-label-color,tab-label-border-color,tab-label-background-active,tab-label-color-active,tab-label-border-color-active;' .
+            '{tabs_content_legend:hide},tab-label-padding;'
     ],
     'fields'   => [
         // Tabs

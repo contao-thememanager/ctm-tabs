@@ -2,8 +2,20 @@
 <xliff version="1.1">
   <file datatype="php" original="contao/languages/en/tl_thememanager.php" source-language="en">
     <body>
-      <trans-unit id="tl_thememanager.tabs_legend">
-        <source>Tabs</source>
+      <trans-unit id="tl_thememanager.tabs_header">
+        <source>Extension: Tabs</source>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tabs_label_typography_legend">
+        <source>Typography</source>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tabs_label_border_legend">
+        <source>Border</source>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tabs_label_color_legend">
+        <source>Colors</source>
+      </trans-unit>
+      <trans-unit id="tl_thememanager.tabs_content_legend">
+        <source>Padding</source>
       </trans-unit>
 
       <trans-unit id="tl_thememanager.tab-label-line-height.0">
