@@ -67,7 +67,7 @@ class TabStartController extends AbstractContentElementController
                                 break;
 
                             case 'tabDivider':
-                                self::$tabGroups[$groupIds[$index]]['tabs'][$elements->id] = $elements->tabLabel;
+                                self::$tabGroups[$groupIds[$index]]['tabs'][$elements->id] = clone $elements;
                                 break;
 
                             case self::TYPE:
@@ -76,7 +76,7 @@ class TabStartController extends AbstractContentElementController
 
                                 self::$tabGroups[$elements->id] = [
                                     'group' => $elements->id,
-                                    'tabs' => [$elements->id => $elements->tabLabel]
+                                    'tabs' => [$elements->id => clone $elements]
                                 ];
                         }
                     }

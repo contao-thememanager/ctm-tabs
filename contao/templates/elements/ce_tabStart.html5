@@ -10,9 +10,9 @@
 <div class="ctm-tabs grid <?= $this->class ?>"<?= $this->cssID ?>>
   <div class="inside">
     <ul class="tab-nav c_list li-none<?= $ulClasses ?>">
-      <?php $i=0;foreach ($this->tabNavElements as $id => $label):$i++?>
+      <?php $i=0;foreach ($this->tabNavElements as $id => $item):$i++?>
         <li class="t-nav-item">
-          <div class="<?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="#tab_<?=$id?>"><?=$label?></div>
+          <div class="<?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="#tab_<?=$id?>"><?=$item->tabLabel?></div>
         </li>
       <?php endforeach; ?>
     </ul>
