@@ -6,5 +6,5 @@
 
   </div>
 </div>
-<div class="ce_tab grid" data-tab-id="#tab_<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<div class="ce_tab grid" data-tab-id="<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
   <div class="inside<?= $insideClasses ?>">

@@ -30,75 +30,79 @@ export default class Tabs
         if (!this.navigations)
             return
 
+        this.tabs = []
+        this.navs = []
+
         this._initTabs()
     }
 
     /**
-     * Iterate through every found tab group on the page
-     *
+     * @private
+     */
+    _checkDeepLink()
+    {
+        const index = new URLSearchParams(window.location.search)?.get('tab')
+
+        if (!index) return
+
+        Object.entries(this.navs).every(([k, v]) => {
+            if (index !== v.dataset.tabToggle)
+                return true
+
+            v.click()
+            v.focus()
+            return false
+        })
+    }
+
+    /**
+     * @private
+     */
+    _bindEvents()
+    {
+        const active = this.options.cssClasses.active
+
+        this.navs.forEach(nav => {
+            nav.onclick = e => {
+                this.navs.forEach(i => {
+                    i.classList.remove(active)
+                    i.ariaExpanded = false
+                })
+
+                Object.entries(this.tabs).forEach(([k, v]) => {
+                    v.classList.remove(active)
+                    if (e.target.dataset.tabToggle === v.dataset.tabId)
+                        v.classList.add(active)
+                })
+
+                e.target.classList.add(active)
+                e.target.ariaExpanded = true
+            }
+        })
+
+        this._checkDeepLink()
+    }
+
+    /**
+     * @param navContainer
+     * @private
+     */
+    _initTabGroup(navContainer)
+    {
+        this.navs = navContainer.querySelectorAll('[data-tab-toggle]')
+        this.tabs = navContainer.nextElementSibling.firstElementChild.children
+        this.tabs[0]?.classList.add(this.options.cssClasses.active)
+
+        this._bindEvents()
+    }
+
+    /**
      * @private
      */
     _initTabs()
     {
         this.navigations.forEach((navContainer) => {
             this._initTabGroup(navContainer)
-        });
-    }
-
-    /**
-     * Initialize a tab group
-     *
-     * @param list
-     * @private
-     */
-    _initTabGroup(navContainer)
-    {
-        const navs  = navContainer.querySelectorAll('[data-tab-toggle]')
-        const tabs = navContainer.nextElementSibling.firstElementChild.children
-
-        tabs[0].classList.add(this.options.cssClasses.active)
-
-        //this._buildStructure(list, tabs)
-
-        navs.forEach(nav => this._bindEvents(nav, navs, tabs))
-    }
-
-    /**
-     * Build the wrapper
-     *
-     * @param list
-     * @param tabs
-     * @private
-     */
-    _buildStructure(list, tabs)
-    {
-        const wrapper = list.querySelector(this.options.content)
-        tabs.forEach(tab => wrapper.append(tab))
-        tabs[0].classList.add(this.options.cssClasses.active)
-    }
-
-    /**
-     * Bind the tab events for the buttons and their content
-     *
-     * @param nav
-     * @param navs
-     * @param tabs
-     * @private
-     */
-    _bindEvents(nav, navs, tabs)
-    {
-        const active = this.options.cssClasses.active
-
-        nav.onclick = e => {
-            navs.forEach(i => i.classList.remove(active))
-
-            Object.entries(tabs).forEach(([k, v]) => {
-                v.classList.remove(active)
-                if (e.target.dataset.tabToggle === v.dataset.tabId)
-                    v.classList.add(active)
-            })
-
-            e.target.classList.add(active)
-        }
+        })
     }
 }

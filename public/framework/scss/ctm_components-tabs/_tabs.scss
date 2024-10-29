@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-.t-nav-item > * {
+[data-tab-toggle] {
   background-color: $tab-label-background;
   color: $tab-label-color;
 
@@ -30,8 +30,7 @@
   border-radius: $tab-label-border-radius;
 
   padding: $tab-label-padding;
-
-  cursor: pointer;
+  text-decoration: revert;
 
   &.active {
     background-color: $tab-label-background-active;
