@@ -12,11 +12,11 @@
     <ul class="tab-nav c_list li-none<?= $ulClasses ?>">
       <?php $i=0;foreach ($this->tabNavElements as $id => $item):$i++?>
         <li class="t-nav-item">
-          <button class="<?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="<?=$id?>" aria-expanded="<?=1===$i?'true':'false'?>"><?=$item->tabLabel?></button>
+          <button class="<?=(1===$i)?'active':''?><?= $tabAClasses ?>" data-tab-toggle="<?=$id?>" data-tab-nav="<?=$item->tabId?>" aria-expanded="<?=1===$i?'true':'false'?>"><?=$item->tabLabel?></button>
         </li>
       <?php endforeach; ?>
     </ul>
     <div class="tab-content item<?= $tabCClasses ?>">
       <div class="inside p-0">
-        <div class="ce_tab grid" data-tab-id="<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+        <div class="ce_tab grid" <?= gettype($this->cssID) ?> data-tab-id="<?=$this->id?>"<?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
           <div class="inside<?= $insideClasses ?>">

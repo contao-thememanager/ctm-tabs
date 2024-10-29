@@ -9,6 +9,7 @@ use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
 use Contao\Date;
+use Contao\StringUtil;
 use Contao\System;
 use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -58,25 +59,28 @@ class TabStartController extends AbstractContentElementController
                     $groupIds  = [];
 
                     // Collect tab labels (recursively)
-                    while ($elements->next())
+                    foreach ($elements as $element)
                     {
-                        switch ($elements->type)
+                        switch ($element->type)
                         {
                             case 'tabStop':
                                 $index--;
                                 break;
 
                             case 'tabDivider':
-                                self::$tabGroups[$groupIds[$index]]['tabs'][$elements->id] = clone $elements;
+                                $this->setTabId($element);
+                                self::$tabGroups[$groupIds[$index]]['tabs'][$element->id] = clone $element;
                                 break;
 
                             case self::TYPE:
                                 $index++;
-                                $groupIds[$index] = $elements->id;
+                                $groupIds[$index] = $element->id;
 
-                                self::$tabGroups[$elements->id] = [
-                                    'group' => $elements->id,
-                                    'tabs' => [$elements->id => clone $elements]
+                                $this->setTabId($element);
+
+                                self::$tabGroups[$element->id] = [
+                                    'group' => $element->id,
+                                    'tabs' => [$element->id => clone $element]
                                 ];
                         }
                     }
@@ -103,5 +107,10 @@ class TabStartController extends AbstractContentElementController
         }
 
         return null;
+    }
+
+    private function setTabId(ContentModel &$element): void
+    {
+        $element->tabId = (StringUtil::deserialize($element->cssID, true)[0] ?? null) ?: $element->id;
     }
 }

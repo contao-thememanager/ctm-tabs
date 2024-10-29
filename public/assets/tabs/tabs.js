@@ -41,12 +41,14 @@ export default class Tabs
      */
     _checkDeepLink()
     {
-        const index = new URLSearchParams(window.location.search)?.get('tab')
+        const hash = window.location.hash
 
-        if (!index) return
+        if ('' === hash || !hash.startsWith("#tab=")) return
+
+        const index = hash.slice(5)
 
         Object.entries(this.navs).every(([k, v]) => {
-            if (index !== v.dataset.tabToggle)
+            if (index !== v.dataset.tabNav)
                 return true
 
             v.click()
@@ -64,6 +66,8 @@ export default class Tabs
 
         this.navs.forEach(nav => {
             nav.onclick = e => {
+                const tabId = e.target.dataset.tabToggle
+
                 this.navs.forEach(i => {
                     i.classList.remove(active)
                     i.ariaExpanded = false
@@ -71,7 +75,7 @@ export default class Tabs
 
                 Object.entries(this.tabs).forEach(([k, v]) => {
                     v.classList.remove(active)
-                    if (e.target.dataset.tabToggle === v.dataset.tabId)
+                    if (tabId === v.dataset.tabId)
                         v.classList.add(active)
                 })
 
@@ -81,6 +85,8 @@ export default class Tabs
         })
 
         this._checkDeepLink()
+
+        onhashchange = () => this._checkDeepLink()
     }
 
     /**
