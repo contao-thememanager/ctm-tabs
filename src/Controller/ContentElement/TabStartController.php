@@ -111,6 +111,6 @@ class TabStartController extends AbstractContentElementController
 
     private function setTabId(ContentModel &$element): void
     {
-        $element->tabId = (StringUtil::deserialize($element->cssID, true)[0] ?? null) ?: $element->id;
+        $element->tabId = (StringUtil::deserialize($element->cssID, true)[0] ?? null) ?: 'tab_' . $element->id;
     }
 }

@@ -43,12 +43,12 @@ export default class Tabs
     {
         const hash = window.location.hash
 
-        if ('' === hash || !hash.startsWith("#tab=")) return
+        if ('' === hash) return
 
-        const index = hash.slice(5)
+        const hashStr = hash.slice(1)
 
         Object.entries(this.navs).every(([k, v]) => {
-            if (index !== v.dataset.tabNav)
+            if (hashStr !== v.dataset.tabNav)
                 return true
 
             v.click()
